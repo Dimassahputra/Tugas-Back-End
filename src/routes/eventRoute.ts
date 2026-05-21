@@ -5,10 +5,11 @@ import {
     getEventById,
     updateEventById,
     deleteEventById
-} from "../controllers/eventController.js"; // Wajib pakai .js
+} from "../controllers/eventController.js"; // Pastikan path ke controller sudah benar
 
 const router = express.Router();
 
+// Menghubungkan HTTP Method dengan fungsi controller Prisma + Supabase
 router.get("/", getAllEvents); 
 router.post("/", createEvent);
 router.get("/:id", getEventById);

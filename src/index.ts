@@ -15,8 +15,9 @@ app.get('/', (req, res) => {
 });
 
 app.use("/events", eventRoutes);
-app.use("/categories", categoryRoutes);
+app.use("/categories", categoryRoutes); // Endpoint: http://localhost:3000/categories
 app.use("/pembicara", pembicaraRoutes);
+
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
