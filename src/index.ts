@@ -3,6 +3,9 @@ import cors from 'cors';
 import eventRoutes from './routes/eventRoute.js';
 import categoryRoutes from './routes/categoryRoute.js';
 import pembicaraRoutes from './routes/pembicaraRoute.js';
+import userRoute from './routes/userRoute.js';
+import authRoute from './routes/authRoute.js';
+
 
 const app = express();
 const port = 3000;
@@ -17,6 +20,8 @@ app.get('/', (req, res) => {
 app.use("/events", eventRoutes);
 app.use("/categories", categoryRoutes); // Endpoint: http://localhost:3000/categories
 app.use("/pembicara", pembicaraRoutes);
+app.use("/users", userRoute);
+app.use("/login", authRoute);
 
 
 app.listen(port, () => {
